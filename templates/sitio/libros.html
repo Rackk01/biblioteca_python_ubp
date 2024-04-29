@@ -1,6 +1,12 @@
 {% include 'sitio/cabecera.html' %}
 
-
+<section className="padding">
+          <div className="container padding">
+            <hr className='hr' />
+  
+            <h2 className="padding">Libros disponibles</h2>
+	</div>
+</section>
     <div class="row">
         {% for libro in libros  %}
         <div class="col-md-3">
@@ -20,7 +26,8 @@
 
         
         
-    </div>
+    <div class="espacio">
+	</div>
 
 
 {% include 'sitio/pie.html' %}

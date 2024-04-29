@@ -2,8 +2,8 @@
 
 <div class="p-5 bg-light">
     <div class="container">
-        <h1 class="display-3">Bienvenid@ <strong> {{  session["usuario"] }} </strong> a administrador del sitio web</h1>
-        <p class="lead">Aquí podra administrar los libros del sitio web </p>
+        <h1 class="display-3">Bienvenid@ <strong>{{ session["usuario"]["nombre"] }}</strong> a administrador del sitio web</h1>
+        <p class="lead">Aquí podrá administrar los libros del sitio web</p>
         <hr class="my-2">
         <p class="lead">
             <a class="btn btn-primary btn-lg" href="/admin/libros" role="button">Empezar la gestión</a>
@@ -12,4 +12,3 @@
 </div>
 
 {% include 'admin/pie.html' %}
-   
