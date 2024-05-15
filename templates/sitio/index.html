@@ -11,8 +11,8 @@
     <section class="padding">
       <div class="container padding">
         <hr class="hr" />
-
-        <h2 class="padding">Libros más descargados</h2>
+       
+        <h2 class="display-3">Bienvenid@ <strong>{{ session["usuario"]["nombre"] }}</strong></h2>
         <iframe
           width="100%"
           height="450"
@@ -32,16 +32,14 @@
           {% if 'usuario' in session and session['usuario']['rol'] == 2 %}
             <h1 class="display-3">Bienvenid@ {{ session['usuario']['nombre'] }}</h1>
           {% else %}
-            <h1 class="display-3">Bienvenid@</h1>
+           
           {% endif %}
           <p class="lead">Empezar con nuestro sitio web</p>
           <hr class="my-2" />
 
           <p class="lead">
             <a class="btn btn-success btn-lg" href="/libros" role="button">Ver libros disponibles</a>
-            {% if 'usuario' in session %}
-              <a class="btn btn-primary btn-lg" href="/mis_descargas" role="button">Descargas</a>
-            {% endif %}
+            
           </p>
 
           <div class="espacio"></div>
@@ -61,14 +59,16 @@
       <div class="container padding">
         <div class="espacio"></div>
 
-        <h2>Recomendados</h2>
 
-        <ul class="libros"></ul>
 
-        <hr />
+        <h2 class="padding">Librerías</h2>
+        <img src="img/Opera_Instantanea_2024-05-14_221523_www.librerianorte.com.ar.png" alt="banner" style="height:130px; width:825px;">
 
-        <h2 class="padding">Editoriales Favoritas</h2>
-
+        <!-- <element class="row-cols-4">
+          <img src="./img/Opera_Instantanea_2024-05-14_221523_www.librerianorte.com.ar.png" width="1854px" height="181px" alt="#" style="border-right: solid 1px; padding: 10px;" /></a>
+        </element> -->
+             
+      
         <ul class="editoriales"></ul>
       </div>
     </section>

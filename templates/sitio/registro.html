@@ -7,6 +7,11 @@
     <title>Registro de Usuarios</title>
     <!-- Bootstrap CSS v5.2.0-beta1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
     <style>
         .mt-5 {
             margin-bottom: 30px; /* Ajusta este valor según sea necesario */
@@ -23,7 +28,7 @@
                 </div>
                 {% endif %}
                 <div class="card">
-                    <div class="card-header bg-primary text-white">
+                    <div class="card-header text-white">
                         Registro de Usuarios
                     </div>
                     <div class="card-body">
@@ -48,7 +53,7 @@
                                 <label for="txtConfirmarContraseña" class="form-label">Confirmar Contraseña:</label>
                                 <input type="password" class="form-control" name="txtConfirmarContraseña" id="txtConfirmarContraseña" required>
                             </div>
-                            <button type="submit" class="btn btn-primary">Registrarse</button>
+                            <button type="submit" class="btn btn-success">Registrarse</button>
                         </form>
                     </div>
                     <div class="card-footer">

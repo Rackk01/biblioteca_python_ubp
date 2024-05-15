@@ -4,6 +4,3 @@ User: admin
 Password: 123 
 * Instalar bcrypt =>  pip install bcrypt
 ----------------------------------------------------------------
-__TAREAS FALTANTES__ 
-
-* Pasar formatos "HTML" a "JSX" de react.
