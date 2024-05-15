@@ -12,7 +12,7 @@
       <div class="container padding">
         <hr class="hr" />
        
-        <h2 class="display-3">Bienvenid@ <strong>{{ session["usuario"]["nombre"] }}</strong></h2>
+        <h2 class="display-3">Bienvenid@  <strong>{{ session["usuario"]["nombre"] }}</strong></h2>
         <iframe
           width="100%"
           height="450"
@@ -59,20 +59,36 @@
       <div class="container padding">
         <div class="espacio"></div>
 
-
-
         <h2 class="padding">Librerías</h2>
-        <img src="img/Opera_Instantanea_2024-05-14_221523_www.librerianorte.com.ar.png" alt="banner" style="height:130px; width:825px;">
+        <div id="slider-container" class="row-cols-4">
+          <div class="slider">
+            <img src="./img/yenny.png" width="250px" height="200px" alt="#" style="border-right: solid 1px; padding: 10px;" /></a>
+            <img src="./img/ateneo.png" width="250px" height="200px" alt="#" style="border-right: solid 1px; padding: 10px;" /></a>
+            <img src="./img/cuspide.png" width="250px" height="200px" alt="#" /></a>
+          </div>
+        </div>        
 
-        <!-- <element class="row-cols-4">
-          <img src="./img/Opera_Instantanea_2024-05-14_221523_www.librerianorte.com.ar.png" width="1854px" height="181px" alt="#" style="border-right: solid 1px; padding: 10px;" /></a>
-        </element> -->
-             
-      
         <ul class="editoriales"></ul>
       </div>
     </section>
   </div>
 </div>
 <div class="espacio"></div>
+
 {% include 'sitio/pie.html' %}
+
+<script>
+  // Función para cambiar de imagen automáticamente
+  function slider() {
+    const sliderImages = document.querySelectorAll('#slider-container .slider img');
+    let index = 0;
+    setInterval(() => {
+      sliderImages[index].style.opacity = '0';
+      index = (index + 1) % sliderImages.length;
+      sliderImages[index].style.opacity = '1';
+    }, 3000); // Cambia la imagen cada 3 segundos, ajusta este valor según tu preferencia
+  }
+
+  // Ejecutar la función cuando se cargue la página
+  window.onload = slider;
+</script>
